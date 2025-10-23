@@ -90,7 +90,7 @@ export const SettingTranslation = () => (
       <blockquote innerHTML={t('setting.translation.cotrans_tip')} />
     </Show>
 
-    <Show when={store.option.translation.server === 'selfhosted'}>
+    <Show when={store.option.translation.server !== 'disable'}>
       <SettingsItemSwitch
         name={t('setting.translation.translate_all')}
         value={isTranslatingAll()}
