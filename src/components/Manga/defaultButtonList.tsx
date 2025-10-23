@@ -121,7 +121,7 @@ export const defaultButtonList: ToolbarButtonList = [
       <IconButton
         tip={t('setting.translation.translate_to_end')}
         enabled={isTranslatingToEnd()}
-        hidden={store.option.translation.server !== 'selfhosted'}
+        hidden={store.option.translation.server === 'disable'}
         onClick={translateToEnd}
         children={<MdLowPriority />}
       />
