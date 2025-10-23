@@ -137,7 +137,6 @@ const createTranslateRange = (imgs: Accessor<number[]>) => {
     imgs().every((i) => translationImgs().has(i)),
   );
   const translateRange = () => {
-    if (store.option.translation.server !== 'selfhosted') return;
     setImgTranslationEnbale(imgs(), !isTranslating());
   };
   return [isTranslating, translateRange] as const;
